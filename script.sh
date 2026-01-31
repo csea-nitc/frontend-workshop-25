@@ -1,3 +1,15 @@
+# Remove conflicting packages if any
+sudo apt remove --purge libnode-dev
+
+# Clean up any remaining node.js packages
+sudo apt remove --purge nodejs nodejs-doc
+
+# Clean the package cache
+sudo apt Clean
+
+# Fix package database
+sudo apt --fix-broken install
+
 # Remove old node if it exists (safe)
 sudo apt remove -y nodejs npm
 
