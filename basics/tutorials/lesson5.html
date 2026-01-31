@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JS Practice</title>
+</head>
+
+<body>
+  <h1>Practice Page</h1>
+  <p>Click around and see what happens.</p>
+
+  <button onclick="sayHello()">Say Hello</button>
+
+  <button id="colorBtn">Change Background</button>
+
+  <p id="text">Nothing happened yet.</p>
+
+  <script>
+    function sayHello() {
+      document.getElementById("text").textContent =
+        "Hello! You clicked the first button.";
+    }
+
+    const colorBtn = document.getElementById("colorBtn");
+
+    colorBtn.addEventListener("click", function () {
+      document.body.style.backgroundColor = "#D3F4FF";
+      document.body.style.color = "#28a745";
+      document.getElementById("text").textContent =
+        "Background color changed!";
+    });
+  </script>
+</body>
+
+</html>
